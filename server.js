@@ -9,7 +9,13 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+    credentials: true, // Allow cookies if needed
+  }));
+  
+
 app.use('/uploads', express.static('uploads'));
 
 // Connect to Database

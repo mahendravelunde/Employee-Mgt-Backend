@@ -14,3 +14,5 @@ build/
 # Ignore dependency files
 package-lock.json
 yarn.lock
+
+.env
